@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<script src="/assets/js/theme-init.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="riculo.css" />
+
+		<title>Currículo de Leonardo Costa</title>
+	</head>
+	<body>
+		<header id="site-header">
+			<span>Currículo</span>
+			<button id="gerar-pdf" onclick="gerarPDF()">Gerar PDF</button>
+			<span id="hora-atual"></span>
+		</header>
+		<main>
+			<header>
+				<div id="header-content">
+					<div id="header-title">
+						<h1>Leonardo Costa</h1>
+						<h2>Pentester</h2>
+					</div>
+					<section>
+						<span>Belém, PA - Brasil</span>
+						<span
+							><a href="https://krnlzx.github.io/" target="_blank"
+								>Blog</a
+							></span
+						>
+						<span
+							><a href="https://www.linkedin.com/in/kernelx86/" target="_blank"
+								>Linkedin</a
+							></span
+						>
+						<span
+							><a href="mailto:leonardok247@gmail.com"
+								>leonardok247@gmail.com</a
+							></span
+						>
+					</section>
+					<nav class="table-of-contents">
+						<a href="#experiencia">Experiência</a>
+						<a href="#conhecimentos">Conhecimentos</a>
+						<a href="#projetos">Projetos</a>
+						<a href="#cursos">Certificados</a>
+						<a href="#educacao">Educação</a>
+					</nav>
+				</div>
+			</header>
+			<section id="experiencia" class="page-section">
+				<h2>Experiência</h2>
+				<ul>
+					<li>
+						<h3>Estágio, Suporte TI</h3>
+						<time>2024 - Presencial</time>
+						<p>
+							Prestava suporte ao usuário com foco em hardware e software, windows, impressoras, sistemas
+								operacionais, e resolução de problemas em rede.
+							Responsável por atividades de instalação e configuração, além de manutenção de computadores.
+						</p>
+					</li>
+					<li>
+						<h3>Pentester Junior</h3>
+						<time>2025 - REMOTO</time>
+						<p>
+							Atuei como Pentester Júnior em ambiente corporativo, participando de testes de intrusão em aplicações web e infraestrutura, com identificação e exploração de vulnerabilidades críticas (IDOR, RCE e falhas de autorização). Responsável pela análise e validação técnica de achados, elaboração e revisão de relatórios executivos/técnicos, definição de recomendações de mitigação baseadas em risco e apoio técnico no onboarding de novos membros da equipe.							
+						</p>
+					</li>
+				</ul>
+			</section>
+
+			<section id="conhecimentos" class="page-section">
+				<h2>Conhecimentos</h2>
+				<section id="conhecimentos-conteudo">
+					<section>
+						<ul>
+							<li><b>Pentest Web</b> – Avaliação completa de segurança em aplicações web, quebra de lógica de autorização (IDOR/PrivEsc), vulnerabilidades de servidor (SSRF/SSTI) e técnicas de evasão de WAF e Race Conditions.</li>
+							<li><b>Active Directory</b> – Enumeração com Powerview, ataques Kerberos, abuso de ACL, movimentação lateral</li>
+							<li><b>Post-Exploitation</b> – Dump de credenciais, pivoting, persistência</li>
+							<li><b>Privilege Escalation</b> – Linux (SUID, Capabilities, cron, PATH hijacking) e Windows (Token abuse, services, misconfigs)</li>
+							<li><b>Relatórios Técnicos</b> – Escrita técnica orientada a impacto e evidência</li>
+							<li><b>Ambientes</b> – Linux (Kali, Ubuntu) e Windows Server</li>
+						</ul>
+						</ul>
+					</section>
+					<section>
+						<h3>Idiomas</h3>
+						<ul>
+							<li>Inglês (Leitura Técnica)</li>
+						</ul>
+					</section>
+				</section>
+			</section>
+
+			<section id="projetos" class="page-section">
+				<h2>Projetos</h2>
+				<ul>
+					<li>
+						<h3>Blog Pessoal</h3>
+						<p>
+							Mantenho o blog técnico: <a href="https://krnlzx.github.io/">krnlzx.github.io</a> <br>
+							No blog publico artigos aprofundados sobre exploração de Active Directory,
+							técnicas de privilege escalation, persistência, Write-ups de máquinas das plataformas Vulnlab e Hack The Box. <br>
+							O objetivo do projeto é consolidar conhecimento técnico, documentar pesquisas e contribuir com a comunidade de segurança ofensiva.
+						</p>
+					</li>
+				</ul>
+			</section>
+
+			<section id="cursos" class="page-section">
+				<h2>Certificados</h2>
+				<ul>
+					<li>
+						<div class="mesma-linha">
+							<h3>CWES - Certified Web Exploitation Specialist</h3>
+							<time>2026 - Em Progresso</time>
+						</div>
+						<address>Hack The Box</address>
+					</li>
+					<li>
+						<div class="mesma-linha">
+							<h3>Pentester</h3>
+							<time>2025</time>
+						</div>
+						<address>IBSEC</address>
+					</li>
+					<li>
+						<div class="mesma-linha">
+							<h3>
+								Analista de Cibersegurança (Governança)
+							</h3>
+							<time>2025</time>
+						</div>
+						<address>IBSEC</address>
+					</li>
+					<li>
+						<div class="mesma-linha">
+							<h3>Hacker Ético</h3>
+							<time>2025</time>
+						</div>
+						<address>IBSEC</address>
+					</li>
+					<li>
+						<div class="mesma-linha">
+							<h3>Desenvolvimento Seguro (DevSecOps)</h3>
+							<time>2025</time>
+						</div>
+						<address>CrowSec</address>
+					</li>
+				</ul>
+			</section>
+
+			<section id="educacao" class="page-section">
+				<h2>Educação</h2>
+				<ul>
+					<li>
+						<div class="mesma-linha">
+							<h3>Ensino Superior em Gestão da Tecnologia da Informação</h3>
+							<time>2024 - 2026</time>
+						</div>
+						<address>
+							Universidade da Amazônia - Belém,
+							PA
+						</address>
+					</li>
+				</ul>
+			</section>
+
+		</main>
+
+		<script>
+			function atualizarHora() {
+				const agora = new Date();
+				const horas = String(agora.getHours()).padStart(2, "0");
+				const minutos = String(agora.getMinutes()).padStart(2, "0");
+				const segundos = String(agora.getSeconds()).padStart(2, "0");
+				const horaFormatada = `${horas}:${minutos}:${segundos}`;
+				document.getElementById("hora-atual").textContent = horaFormatada;
+			}
+			setInterval(atualizarHora, 1000);
+			atualizarHora();
+
+			function gerarPDF() {
+				window.focus();
+				window.print();
+			}
+		</script>
+	</body>
+</html>
