@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>cwes</title>
+    <style>
+    :root {
+      --bg: #000000;
+      --panel: rgba(255, 255, 255, 0.03);
+      --border: rgba(255, 255, 255, 0.06);
+      --text: #cfd6ff;
+      --muted: #7d85a6;
+      --accent: #5b7cfa;
+    }
+
+    body {
+      margin: 60px auto;
+      width: 75%;
+      background: radial-gradient(circle at 20% 10%, #000000, var(--bg));
+      color: var(--text);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 14px;
+    }
+
+    #h1 {
+      font-size: 22px;
+      margin-top: 0;
+    }
+
+    #asci {
+      font-size: 3px;
+      line-height: 1;
+      /* Mantém o espaçamento vertical correto */
+      margin: 0;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    b {
+      color: red;
+    }
+
+    section {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px;
+      margin-top: 32px;
+    }
+
+#cwes {
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 32px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+
+#cwes .img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cwes .img-wrapper img {
+  width: 280px;
+  height: auto;
+  display: block;
+  animation: pulse 3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 20px rgba(15, 28, 78, 0.6))
+            drop-shadow(0 0 40px rgba(15, 28, 78, 0.6));
+  }
+  50% {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 30px rgba(15, 28, 78, 0.6))
+            drop-shadow(0 0 60px rgba(15, 28, 78, 0.6));
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 20px rgba(15, 28, 78, 0.6))
+            drop-shadow(0 0 40px rgba(15, 28, 78, 0.6));
+  }
+}
+    </style>
+</head>
+<body>
+                  <center>
+                    <pre id="asci">
+        ⢠⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡄⠀⠀⠀
+    ⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀
+    ⢀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⡀
+    ⠘⡀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⡇⠀⢀⠇
+    ⠀⣧⠀⢸⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⡇⠀⣼⠀
+    ⠀⢸⣆⠀⣿⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⠀⣰⡏⠀
+    ⢱⡀⢿⣆⠸⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⡏⣰⡿⠀⡌
+    ⠀⢷⡈⢿⣧⣻⣿⣧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⣿⣟⣴⡿⢁⡾⠀
+    ⢀⠈⢷⣌⢿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣾⣿⣿⣿⡿⣡⡾⠁⡀
+    ⠀⠳⡈⢻⣦⡻⣿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿⣿⣿⣟⣵⡟⢁⠞⠀
+    ⠀⠀⠙⢦⡹⣿⣿⣿⣿⣿⣿⣿⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣶⣿⣿⣿⣿⣿⣿⣿⢏⣴⠋⠀⠀
+    ⠀⠀⠀⡈⠻⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠟⢁⠀⠀⠀
+    ⠀⠀⠀⠈⠢⣌⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣤⣄⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣠⣤⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⣡⠔⠁⠀⠀⠀
+    ⠀⠀⠀⠀⢀⠈⠛⢶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡷⠛⠁⡀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠉⠒⠦⣬⣛⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣛⣥⠴⠒⠉⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠠⠤⢤⣌⣉⣛⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣛⣉⣡⡤⠤⠄⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⣉⣭⣭⣽⣿⣿⣿⣿⣿⣿⣿⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣯⣭⣭⣉⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⢉⣉⣭⣽⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣭⣉⣉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠒⠒⠛⠛⠛⠛⢛⣩⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿⣭⡛⠛⠛⠛⠛⠒⠒⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠤⠴⠾⠟⠛⣫⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⣿⣿⣿⣿⣿⣿⣝⠛⠻⠷⠦⠤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⠶⠟⠛⣫⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⣿⣿⣿⣿⣿⣿⣝⠛⠻⠶⢤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡤⠾⠛⣡⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⢀⣿⣿⣿⣿⣿⣿⢿⣎⠛⠷⢤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠚⠋⢀⠿⠋⡿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⢿⠙⠿⡄⠙⠓⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⡇⠀⠀⠀⠀⠀⠀⢸⣿⣿⠇⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⡇⠀⠀⠀⠀⠀⠀⢸⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⡇⠀⠀⠀⠀⠀⠀⢸⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⡇⠀⠀⠀⠀⠀⠀⢸⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⢸⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+      </pre>
+                </center>
+<div id="cwes">        
+  <div class="img-wrapper">
+    <img src="logo.jpg" alt="CWES Badge">
+  </div>
+</div>
+
+<center><h2>CWES Review - HackTheBox Certified Web Exploitation Specialist 2026</h2></center>
+    <section>
+    <p>Olá pessoal, hoje venho mostra a vocês sobre como me preparei e passei na certificação <b>CWES (Certified Web Exploitation Specialist)</b>.
+Essa foi a minha primeira certificação prática e realmente gostei bastante do caminho até a aprovação.
+</p>
+<br>
+
+<center><img src="cwes2.jpeg" alt="" width="25%"style="box-shadow: 0 0 12px rgba(255, 255, 255, 0.15),
+              inset 0 0 8px rgba(91, 124, 250, 0.05); border-radius: 10px;"></center>
+<br>
+<h2><b>Contexto</b></h2>
+<p>A CWES (Web Exploitation Specialist), é uma certificação prática voltada para hacking/pentesting de aplicações web para profissionais. Recentemente, tem sido muito reconhecido no área pelos 20 tópicos/módulos que cobre:</p>
+    <ol>
+        <li>Web Requests</li>
+        <li>Introduction to Web Applications</li>
+        <li>Using Web Proxies (Burp Suite, OWASP ZAP)</li>
+        <li>Information Gathering - Web Edition</li>
+        <li>Attacking Web Applications with Ffuf (Enumeration and fuzzing with Ffuf)</li>
+        <li>javaScript Deobfuscation</li>
+        <li>Cross-Site Scripting (XSS)</li>
+        <li>SQL Injection Fundamentals</li>
+        <li>SQLMap Essentials (Advanced use of SQLMap)</li>
+        <li>Command Injections</li>
+        <li>File Upload Attacks</li>
+        <li>Server-side Attacks (SSRF, SSTI, SSI)</li>
+        <li>Login Brute Forcing (Hydra, Medusa)</li>
+        <li>Broken Authentication</li>
+        <li>Web Attacks (HTTP Verb Tampering, IDOR, XXE)</li>
+        <li>File Inclusion</li>
+        <li>Session Security (Hijacking, fixation, CSRF, XSS, open redirect)</li>
+        <li>Web Service & API Attacks</li>
+        <li>Hacking WordPress</li>
+        <li>Bug Bounty Hunting Process (Methodology and reporting)</li>
+    </ol>
+    <br>
+    <p>Todos os módulos oferecido são bem completos, pois cada um deles tem Laboratórios para você testar o que você aprendeu durante o módulo e no final ainda tem o <b>Skills Assessments</b> que funciona como um CTF específico para aquele módulo.</p>
+    <center><img src="modulos.avif" alt="" width="75%"style="box-shadow: 0 0 12px rgba(255, 255, 255, 0.15),
+              inset 0 0 8px rgba(91, 124, 250, 0.05); border-radius: 10px;"></center>
+
+    <h2><b>A prova</b></h2>
+    <p>Você pode começar a prova quando quiser após ter completado 100% do path <b>Web Penetration Tester</b>, o exame em si não é supervisionado, você pode fazer a prova livremente sem alguém te supervisionando, você irá receber uma VPN e um painel onde você pode enviar as flags obtidas ao longo da prova.</p>
+    <center><img src="painel.avif" alt="" width="40%" style="box-shadow: 0 0 12px rgba(255, 255, 255, 0.15),
+              inset 0 0 8px rgba(91, 124, 250, 0.05); border-radius: 10px;"></center>
+
+    <p>A prova consiste em cinco sites que você deve comprometer completamente, partindo de usuário não autenticado até administrador tanto na web quanto no servidor. Você terá sete dias para obter pelo menos oito das dez bandeiras e escrever um relatório sobre tudo o que você descobriu. lembrando que todo o conteúdo está em inglês inclusive o relatório.</p>
+
+    <h2><b>Minha Experiência</b></h2>
+    <p>A prova em si é bem divertida e desafiadora, no começo da um certo medo de começar mas depois passa.</p>
+    <p>Para quem quer fazer o exame eu aconselho sempre manter uma <b>mentalidade positiva e focada</b>, muita das vezes eu me encontrava em um caminho sem saída e sem ideia do que ser feito,
+      e rever minhas anotações superficialmente me ajudou a destravar minha mente. <br>
+      Levei cerca de três dias e meio pra terminar a prova e sempre mantendo uma frequência de 8 horas por dia, o relátório foi bem rápido pois levou apenas 1 dia e meio pra escrever ele bem detalhado. <br>
+      Assim que enviei o relatório, o tempo da prova foi pausado, e depois de 7 dias recebi a notificação que tinha sido aprovado no exame. 
+    </p>
+    <br>
+    <center><img src="CWES.png" alt="" width="50%" style="box-shadow: 0 0 12px rgba(255, 255, 255, 0.15),
+              inset 0 0 8px rgba(91, 124, 250, 0.05); border-radius: 10px;"></center>
+
+    <h2><b>Dicas</b></h2>
+    <p>Primeimente: Anotação é a parte mais importante de toda essa jornada, faça anotações detalhadas de cada assunto dos módulos, escreva elas de uma forma que você irá entender depois.
+    <br>Uma das coisa que eu gostava de fazer era escrever minis writeups do <b>Skills Assessments</b> de cada módulo, isso me ajudava a entender melhor como cada parte funcionava e porque funcionava,
+    uma das coisa que fazim também era gravar videos dos labs pra entender a onde eu estava travando e o que precisava melhorar, isso me ajudava a destravar a mente. <br>
+    Outra coisa imporante a se fazer é os labs do Fortress, eles simulam muito bem um cenário real e o que pode cair na prova, recomendo fazer o <b>JET</b> de início, ja que ele simula muito bem um cenário real.
+    <center><img src="fort.png" alt="" width="45%" style="box-shadow: 0 0 12px rgba(255, 255, 255, 0.15),
+              inset 0 0 8px rgba(91, 124, 250, 0.05); border-radius: 10px;"></center>
+    <br>
+    Outra alternativa que me ajudou um pouco foi fazer o módulo <a href="https://academy.hackthebox.com/course/preview/attacking-enterprise-networks">Attacking Enterprise Networks</a>, ele aborda muito bem a parte de exploração web e ja te deixa preparado para a prova. <br>
+  <br>
+    E depois de terminar o path completo refiz minhas anotações de uma forma bem organizada e facil de ser consultavél, isso me deu bastente eficiência durante a prova. <br>
+    <br>
+    <center><img src="notes.png" alt="" width="38%" style="box-shadow: 0 0 12px rgba(255, 255, 255, 0.15),
+              inset 0 0 8px rgba(91, 124, 250, 0.05); border-radius: 10px;"></center>
+    </p>
+
+    <h2><b>Relatório</b></h2>
+    <p>
+      Sobre o relatório, eles fornecem um modelo que você pode usar, porém eu não recomendo pois você tem que editar tudo na mão e é meio chato. <br>
+      Para isso temos <a href="https://docs.sysreptor.com/">Sysreptor</a>, ele server perfeitamente para escrever o relatório por conta que ele ja tem um modelo pronto da CWES que você pode pegar aqui: <a href="https://docs.sysreptor.com/htb-reporting-with-sysreptor/">Modelos Hack The box</a>. <br>
+      Para o seu relatório, você deve pensar que ele tem que ser totalmente reproduvizel, tanto manual quando por ferramentas. Sempre que você descobrir algo novo escreve um simples resumo de como chegou até la, e no report final deixe isso bem datalhadamente, sempre lembre que o report deve ser totalmenente reproduzivel.
+    </p>
+
+    <h2><b>Conclusão</b></h2>
+    <p>Essa foi a minha primeira certificação prática e achei ela realmente muito divertida e desafiadora, se você ja tem uma boa base de pentest web a prova será bem mais fácil. É uma certificação que vale muito a pena por conta do peso que o HTB tem no mercado, e também pelo conteúdo ensinado durante o trajeto. <br>
+    Se você pretende fazer ela, aconselho que foque bastante no conteúdo ensinado, foi uma prova que me tirou algumas noites de sono porém aprendi bastante ao longo desse trajeto, e uma das melhores sensações além de receber o certificado é receber o feeadback que é passado no final sobre tudo o que você fez. <br>
+    <br>
+    Good lucky :)
+    </p>
+        <center><p><br>
+        by Leonardo Kauan - krnl</p></center>
+    </section>
