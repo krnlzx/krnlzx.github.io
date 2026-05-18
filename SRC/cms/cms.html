@@ -196,7 +196,7 @@
     <img src="/SRC/cms/comando.png" alt="" width="95%">
     <h4>Response:</h4>
     <b><pre><code>{"status": "success"}</code></pre></b>
-    <p>O paylaod é armazenado em <b>encoding.temp_file</b> no banco de dados.</p>
+    <p>O payload é armazenado em <b>encoding.temp_file</b> no banco de dados.</p>
     <h4>Notes on output path selection:</h4>
     <p><b>nginx</b> serve arquivos localizados em <b>media_files/original/thumbnails/</b> sem restrições quanto às extensões dos arquivos.</p>
     <p>Os arquivos do tipo <b>Dotfiles (por exemplo, .rce.txt)</b> são bloqueados pelo nginx <b>(location ~ /\. { deny all; })</b>.</p>
@@ -221,7 +221,7 @@
     <br>
     <h3>Exploit</h3>
     <p>Com base na análise da vulnerabilidade, foi desenvolvida uma prova de conceito automatizada em Python, que abrange todo o fluxo de exploração manual, desde a autenticação até a injeção do payload.
-        O exploit contem duas funcionalidades importantes sendo elas <b>--command</b> e a <b>--interactive</b>.
+        O exploit contém duas funcionalidades importantes sendo elas <b>--command</b> e a <b>--interactive</b>.
     </p>
     <p>O exploit estará disponível no meu github <b><a href="https://github.com/kernelzada/MediaCMS-8.0.7-Admin-Authenticated-RCE">neste link</a></b>.</p>
     <br>
